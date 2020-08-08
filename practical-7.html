@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical-7</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+        .container {
+            width: 95%;
+            border: solid 2px rgb(114, 223, 250);
+            margin: auto;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+        }
+
+        .center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+
+        .header {
+            height: 15vh;
+            width: 98%;
+            margin: 1%;
+            font-size: 25px;
+            background: rgb(177, 223, 11);
+            color: white;
+        }
+
+        .footer {
+            height: 15vh;
+            width: 98%;
+            margin: 1%;
+            font-size: 25px;
+            background: rgb(223, 180, 124);
+            color: white;
+        }
+
+        .banner {
+            height: 100vh;
+            font-size: 25px;
+            width: 98%;
+            margin: 1%;
+            background: rgb(235, 189, 126);
+            color: white;
+        }
+
+        .section-1 {
+            height: 60vh;
+            width: 100%;
+        }
+
+        .section-1 p {
+            text-align: center;
+            background: blue;
+            
+        }
+
+        .test {
+
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+
+        }
+
+        #circle {
+            width: 23%;
+            height: 75%;
+            background: rgb(10, 241, 41);
+            border-radius: 50%;
+
+
+        }
+
+        .section-2 {
+            height: 100vh;
+            width: 98%;
+            margin: 1%;
+        }
+
+        .left {
+            width: 49%;
+            height: 86.5vh;
+            margin-top: 3%;
+            background: rgb(145, 126, 126);
+            float: left;
+            font-size: 25px;
+            color: white;
+        }
+
+        .right {
+            width: 49%;
+            height: 90vh;
+            margin-top: 2%;
+
+            float: right
+        }
+
+        #article {
+            width: 96%;
+            height: 31%;
+            margin: 2%;
+            font-size: 25px;
+            background: rgb(255, 0, 0);
+            color: white;
+        }
+
+        .section-3 {
+            height: 74vh;
+            width: 100%;
+
+        }
+
+        .box {
+            width: 23%;
+            height: 75%;
+            background: rgb(124, 140, 228);
+            margin-bottom: 5%;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header center">Header</div>
+        <div class="banner center">Banner</div>
+        <div class="section-1">
+
+            <h2 class="center">Section-1</h2>
+
+            <div class="test">
+                <div id="circle"></div>
+                <div id="circle"></div>
+                <div id="circle"></div>
+                <div id="circle"></div>
+            </div>
+        </div>
+        <div class="section-2">
+
+            <h2 class="center">Section-2</h2>
+            <div class="left center">Main Content</div>
+            <div class="right ">
+                <div id="article" class="center">Artical-1</div>
+                <div id="article" class="center">Artical-2</div>
+                <div id="article" class="center">Artical-3</div>
+            </div>
+        </div>
+        <div class="section-3">
+
+            <h2 class="center">Section-3</h2>
+            <div class="test">
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+            </div>
+        </div>
+        <h2 class="center">Section-4</h2>
+        <div class="footer center">Footer</div>
+    </div>
+</body>
+
+</html>
