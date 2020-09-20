@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practical-14</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+</head>
+
+<body>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+
+        #title {
+            color: red;
+            text-transform: uppercase;
+            text-align: center;
+            font-size: 50px;
+            margin-top: 20px;
+            margin-bottom: 100px;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+
+        .container .template-1,
+        .container .template-2,
+        .container .template-3 {
+            width: 30%;
+            border-radius: 5px;
+            box-shadow: 1px 1px 1px 1px grey;
+        }
+
+        #grad {
+            background-image: linear-gradient(90deg, rgb(243, 207, 5) 0%, rgba(238, 57, 11, 0.88) 0%, rgb(235, 144, 9) 97%);
+        }
+
+        .header-1 h2 {
+            padding: 30px;
+            text-align: center;
+            text-transform: uppercase;
+            color: white;
+        }
+
+        .header-1 .icons {
+            color: white;
+            font-size: 20px;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .header-1 .icons i {
+            padding: 10px;
+        }
+
+        .input-div-1 {
+            padding: 30px;
+            text-align: center;
+        }
+
+        .input-div-1 input {
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            background: transparent;
+            width: 100%;
+            font-size: 25px;
+        }
+
+        .input-div-1 .label {
+            color: lightgray;
+            text-align: start;
+            padding: 5px;
+        }
+
+        .input-div-1 .forgot {
+            color: gray;
+            text-align: end;
+            padding: 5px;
+        }
+
+        .template-1 .button-div-1 input {
+            background: gray;
+            color: white;
+            padding: 10px;
+            padding-left: 30px;
+            padding-right: 30px;
+            border-radius: 20px;
+            margin: 10px;
+            border: none;
+            font-size: 16px;
+            text-align: center;
+        }
+
+        .template-1 .button-div-1 label {
+            color: grey
+        }
+
+        .template-1 .button-div-1 label a {
+            text-decoration: none;
+            color: black;
+        }
+
+        #extra {
+            text-align: end;
+            display: inline;
+            padding-left: 30px;
+        }
+
+        .template-2 .header-2 h2 {
+            padding: 20px;
+            text-align: center;
+            color: purple;
+            text-transform: uppercase;
+            margin-bottom: 55px;
+        }
+
+        .template-2 .input-div-1 {
+            padding: 10px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+
+        }
+
+        .template-2 .input-div-1 div {
+            color: grey;
+            margin-bottom: 10px;
+        }
+
+        .template-2 .input-div-1 .input {
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            background: transparent;
+            width: 100%;
+            font-size: 30px;
+        }
+
+        .template-2 .input-div-1 .forgot {
+            display: block;
+        }
+
+        .template-2 .input-div-1 .forgot input {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .template-2 .button-div-1 {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .template-2 .button-div-1 input {
+            background: rgb(255, 0, 234);
+            color: white;
+            padding: 10px;
+            padding-left: 20px;
+            padding-right: 20px;
+            border-radius: 20px;
+            margin: 10px;
+            border: none;
+            font-size: 20px;
+        }
+
+        .template-2 .button-div-1 label {
+            color: grey
+        }
+
+        .template-2 .button-div-1 label a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .template-2 .icons {
+            background: rgb(90, 88, 128);
+            color: rgba(255, 245, 245, 0.979);
+            font-size: 30px;
+            display: flex;
+            justify-content: center;
+            padding: 30px;
+        }
+
+        .template-2 .icons i {
+            margin: 10px;
+        }
+
+
+        .template-3 .header-3 {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .template-3 .header-3 h2 {
+            margin: 20px;
+            font-size: 40px;
+            color: rgb(16, 203, 250);
+        }
+
+        .template-3 .input-div-1 {
+            padding: 10px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+
+        }
+
+        .template-3 .input-div-1 div {
+            color: grey;
+            margin-bottom: 10px;
+        }
+
+        .template-3 .input-div-1 label {
+            color: rgb(0, 183, 255);
+        }
+
+        .template-3 .input-div-1 input {
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            background: transparent;
+            width: 100%;
+            font-size: 30px;
+
+        }
+
+        .template-3 .input-div-1 .forgot {
+            text-align: right;
+        }
+
+        .template-3 .button-div-1 {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .template-3 .button-div-1 input {
+            background: rgb(0, 238, 255);
+            color: white;
+            padding: 10px;
+            padding-left: 20px;
+            padding-right: 20px;
+            border-radius: 20px;
+            margin: 10px;
+            border: none;
+            font-size: 20px;
+        }
+
+        .template-3 .button-div-1 label {
+            color: grey
+        }
+
+        .template-3 .button-div-1 label a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .template-3 .icons {
+            font-size: 30px;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+            color: rgb(43, 252, 252)
+        }
+
+        .template-3 .icons i {
+            margin: 10px;
+            box-shadow: 2px 2px 2px 2px grey;
+            border-radius: 20px;
+            padding-right: 20px;
+            padding-left: 20px;
+        }
+    </style>
+    <h1 id="title">Form Templates</h1>
+    <div class="container">
+        <div class="template-1">
+            <div class="header-1" id="grad">
+                <h2>Log In</h2>
+                <div class="icons">
+                    <i class="fa fa-google-plus"></i>
+                    <i class="fa fa-twitter"></i>
+                    <i class="fa fa-facebook"></i>
+                </div>
+            </div>
+            <div class="input-div-1">
+                <div class="label">
+                    <label for="">Your Email</label>
+                </div>
+                <div class='input'>
+                    <input type="text" />
+                </div>
+                <div class="label">
+                    <label for="">Your Password</label>
+                </div>
+                <div class='input'>
+                    <input type="password" />
+                </div>
+                <div class='forgot'>forgot <em><b>Password?</b></em></div>
+            </div>
+            <div class="button-div-1">
+                <label for=""></label>
+                <input type="submit" value='login'>
+                <div id="extra">
+                    <label for="">Do you have an account? <a href=""><b>Signup</b></a> </label></div>
+            </div>
+        </div>
+        <div class="template-2">
+            <div class="header-2">
+                <h2>Sign Up</h2>
+            </div>
+            <div class="input-div-1">
+                <div class="label">
+                    <label for="">Your Email</label>
+                </div>
+                <div class='input'>
+                    <input type="text" class="input" />
+                </div>
+                <div class="label">
+                    <label for="">Your Password</label>
+                </div>
+                <div class='input'>
+                    <input type="password" class="input" />
+                </div>
+                <div class='forgot'>
+                    <label for="">Accepting <span style="color:blue">terms and conditions.</span> </label>
+                </div>
+            </div>
+            <div class="button-div-1">
+                <label for=""></label>
+                <input type="submit" value='Sign up'>
+                <div id="extra">
+                    <label for="">Do you have an account? <a href=""><b>Signup</b></a> </label></div>
+            </div>
+            <div class="icons">
+                <i class="fa fa-google-plus"></i>
+                <i class="fa fa-twitter"></i>
+                <i class="fa fa-facebook"></i>
+            </div>
+        </div>
+        <div class="template-3">
+            <div class="header-3">
+                <h2>Sign In</h2>
+            </div>
+            <div class="input-div-1">
+                <div class="label">
+                    <label for="">Your Email</label>
+                </div>
+                <div class='input'>
+                    <input type="text" />
+                </div>
+                <div class="label">
+                    <label for="">Your Password</label>
+                </div>
+                <div class='input'>
+                    <input type="password" />
+                </div>
+                <div class='forgot'>forgot <b>Password?</b></div>
+            </div>
+            <div class="button-div-1">
+                <label for=""></label>
+                <input type="submit" value='Sign up'>
+                <label for="">Do you have an account? <a href=""><b>Login</b></a> </label>
+            </div>
+            <div class="icons">
+                <i class="fa fa-google-plus"></i>
+                <i class="fa fa-twitter"></i>
+                <i class="fa fa-facebook"></i>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
